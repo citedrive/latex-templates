@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{natbib}
+
+
+\begin{filecontents}{sample.bib}
+@article{Doe:1966,
+    title        = {Study on the risks of incorrectly recorded [...] and their impact on [...].},
+    author       = {John Doe},
+    year         = 1966,
+    journal      = {BibTeX Publishing},
+    volume       = 44,
+    number       = 44,
+    pages        = {123--456}
+}
+@article{smith201X,
+    title        = {An interesting article},
+    author       = {John Smith},
+    year         = {201X},
+    journal      = {Journal of Interesting Articles}
+}
+\end{filecontents}
+
+\title{A Short Guide to Reference Management using natbib with BibTeX}
+\author{CiteDrive}
+\date {January 1988}
+
+\begin{document}
+
+\maketitle
+\textbf{Narrative citation:} \citet{Doe:1966} investigated the risks of incorrectly \\
+recorded [...], which results in distortion.
+\textbf{Parenthetical citation:} The risks of incorrect recording of [...] could lead to distortion \citep{Doe:1966}.
+
+
+\medskip
+
+\bibliography{sample}
+\bibliographystyle{apalike}
+\end{document}
